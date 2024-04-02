@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "115097847591",
+    "project_id": "live-maps-and-webcams",
+    "storage_bucket": "live-maps-and-webcams.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115097847591:android:454005edc494d1f575cb02",
+        "android_client_info": {
+          "package_name": "com.earthmap.satelliteview.streetview.mapsandnavigation.liveearthmap.gps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "115097847591-2v23stkjheoldt3q0m4aqip1v5dshq1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkYSOw2XzDDI200ubBdeFxSEcAYfl906E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "115097847591-2v23stkjheoldt3q0m4aqip1v5dshq1c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

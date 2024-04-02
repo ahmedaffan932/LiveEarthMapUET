@@ -1,0 +1,64 @@
+buildscript {
+    ext.kotlin_version = '1.4.20-RC'
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://artifacts.applovin.com/android' }
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+                // Do not change the username below.
+                // This should always be `mapbox` (not your username).
+                username = 'mapbox'
+                // Use the secret token you stored in gradle.properties as the password
+                password = project.properties['MAPBOX_DOWNLOADS_TOKEN'] ?: 'sk.eyJ1IjoiYWhtZWRhZmZhbjkzMiIsImEiOiJja3YxdzVrZWkwNGl2MnBvYmJ6ZnFwOWIyIn0.sk2ShDEkkLCqvgnVNWz5Rg'
+            }
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.2'
+
+        // Specified as going here by the Firebase instructions.
+        classpath 'com.google.gms:google-services:4.3.10'
+
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.13'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.0'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
+        classpath "com.applovin.quality:AppLovinQualityServiceGradlePlugin:+"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+                // Do not change the username below.
+                // This should always be `mapbox` (not your username).
+                username = 'mapbox'
+                // Use the secret token you stored in gradle.properties as the password
+                password = project.properties['MAPBOX_DOWNLOADS_TOKEN'] ?: 'sk.eyJ1IjoiYWhtZWRhZmZhbjkzMiIsImEiOiJja3YxdzVrZWkwNGl2MnBvYmJ6ZnFwOWIyIn0.sk2ShDEkkLCqvgnVNWz5Rg'
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

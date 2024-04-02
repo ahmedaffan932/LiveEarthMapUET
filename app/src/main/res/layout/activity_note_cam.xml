@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteCamActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/bannerAdFrameLayoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:elevation="@dimen/padding"
+            android:background="@drawable/bg_gradient_pink"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bannerAdFrameLayoutBottom"
+            app:layout_constraintTop_toBottomOf="@id/bannerAdFrameLayoutTop">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/fab_padding"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/bg_gradient_pink">
+
+                <ImageView
+                    android:id="@+id/btnBackNoteCam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_nothing"
+                    android:padding="@dimen/fab_padding"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/textViewNoteCam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/note_cam"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/padding_24"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpUsage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/cameraView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+            <ImageButton
+                android:id="@+id/btnChangeCameraFace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_nothing"
+                android:padding="20dp"
+                android:src="@drawable/ic_switch_camera"
+                app:layout_constraintBottom_toBottomOf="@id/btnCapture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btnCapture"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPreviewImageView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding"
+                    android:background="@drawable/bg_translucent_less_rounded"
+                    android:elevation="@dimen/padding_24"
+                    android:padding="@dimen/less_padding"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    mapbox:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvLatitudeNoteCam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_lat"
+                        android:drawablePadding="@dimen/less_padding"
+                        android:paddingBottom="@dimen/less_padding"
+                        android:text="@string/latitude"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/tvLongitudeNoteCam"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvLongitudeNoteCam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_long"
+                        android:drawablePadding="@dimen/less_padding"
+                        android:paddingBottom="@dimen/less_padding"
+                        android:text="@string/longitude"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvLatitudeNoteCam"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvElevationNoteCam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/mountains"
+                        android:drawablePadding="@dimen/less_padding"
+                        android:paddingBottom="@dimen/less_padding"
+                        android:text="@string/elevation"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@id/tvAccuracyNoteCam"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvLongitudeNoteCam" />
+
+                    <TextView
+                        android:id="@+id/tvAccuracyNoteCam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/accuracy"
+                        android:drawablePadding="@dimen/less_padding"
+                        android:drawableTint="@color/black"
+                        android:paddingBottom="@dimen/less_padding"
+                        android:text="@string/accuracy"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvElevationNoteCam"
+                        app:layout_constraintTop_toBottomOf="@+id/tvLongitudeNoteCam" />
+
+                    <TextView
+                        android:id="@+id/tvTimeNoteCam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/clock"
+                        android:drawablePadding="@dimen/less_padding"
+                        android:text="@string/time"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAccuracyNoteCam" />
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ip"
+                        android:drawablePadding="@dimen/less_padding"
+                        android:text="@string/time"
+                        android:textColor="@color/black"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTimeNoteCam" />
+
+                    <TextView
+                        android:id="@+id/tvNoteNoteCam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/less_padding"
+                        android:text="@string/note"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+                    <EditText
+                        android:id="@+id/etNoteNoteCam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nothing"
+                        android:maxLength="150"
+                        android:maxLines="3"
+                        android:textCursorDrawable="@drawable/cursor_pink"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvNoteNoteCam"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTimeNoteCam" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/previewImageNoteCam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/fab_padding"
+                android:background="@drawable/bg_gradient_pink_circle"
+                android:elevation="@dimen/fab_padding"
+                android:padding="@dimen/fab_padding"
+                android:src="@drawable/ic_settings"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/btnCapture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btnCapture"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnCapture"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginBottom="@dimen/extra_padding"
+                android:background="@drawable/bg_translucent_circle"
+                android:elevation="@dimen/fab_padding"
+                android:padding="@dimen/padding"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/btn_capture"
+                tools:ignore="VectorDrawableCompat" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCollection"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginVertical="@dimen/less_padding"
+                android:layout_marginEnd="@dimen/padding_24"
+                android:background="@drawable/bg_translucent_less_rounded"
+                android:elevation="@dimen/fab_padding"
+                android:padding="@dimen/less_padding"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/btnCapture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btnCapture">
+
+                <ImageView
+                    android:id="@+id/imageViewCollection"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/textView6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/bg_gradient_pink" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/collection"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <FrameLayout
+            android:id="@+id/bannerAdFrameLayoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@color/blue"
+
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+            android:id="@+id/bottomSheet"
+        layout="@layout/note_cam_bottom_sheet" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

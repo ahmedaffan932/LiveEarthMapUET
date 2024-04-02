@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".SoundMeterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_pink"
+        android:elevation="@dimen/fab_padding"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBackSoundMeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="@dimen/fab_padding"
+            android:background="@drawable/bg_nothing"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/textViewNoteCam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noise_detector"
+            android:textColor="@color/white"
+            android:textSize="@dimen/padding_24"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="SpUsage" />
+
+
+        <ImageView
+            android:id="@+id/btnSearchLocationCompass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:visibility="gone"
+            android:padding="@dimen/fab_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.github.anastr.speedviewlib.PointerSpeedometer
+        android:id="@+id/speedAnalog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintCircleRadius="@dimen/fab_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+        android:layout_marginTop="@dimen/padding"
+        app:sv_backgroundCircleColor="@color/nothing"
+        app:sv_centerCircleColor="@color/blue"
+        app:sv_centerCircleRadius="@dimen/btn_text_size"
+        app:sv_cutPadding="@dimen/less_padding"
+        app:sv_indicator="NormalSmallIndicator"
+        app:sv_indicatorColor="@color/white"
+        app:sv_indicatorLightColor="@color/white"
+        app:sv_indicatorWidth="12dp"
+        app:sv_markStyle="ROUND"
+        app:sv_maxSpeed="180"
+        app:sv_sectionStyle="ROUND"
+        app:sv_speedTextFormat="INTEGER"
+        app:sv_speedTextSize="@dimen/text_size_normal"
+        app:sv_speedometerColor="@color/white"
+        app:sv_speedometerWidth="10dp"
+        app:sv_textSize="15dp"
+        app:sv_tickNumber="10"
+        android:background="@drawable/bg_gradient_blue_meter"
+        app:sv_tickRotation="true"
+        app:sv_tickPadding="@dimen/text_size_normal"
+        app:sv_tickTextFormat="INTEGER"
+        app:sv_unit="dB"
+        app:sv_unitTextColor="@color/white"
+        app:sv_unitTextSize="@dimen/fab_padding"
+        app:sv_withIndicatorLight="false"
+        app:sv_withTremble="false"
+        tools:ignore="MissingClass" />
+
+    <TextView
+        android:id="@+id/textMin"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_padding"
+        android:background="@drawable/bg_top_left_corner"
+        android:gravity="center"
+        android:paddingVertical="@dimen/fab_padding"
+        android:text="@string/_0"
+        android:textSize="@dimen/extra_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnInfo"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/min"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/padding"
+        android:textStyle="bold"
+        android:textSize="@dimen/btn_text_size"
+        app:layout_constraintStart_toStartOf="@id/textMin"
+        app:layout_constraintEnd_toEndOf="@id/textMin"
+        app:layout_constraintTop_toBottomOf="@+id/textMin"
+        tools:ignore="NestedWeights,SpUsage" />
+
+    <TextView
+        android:id="@+id/textAvg"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_padding"
+        android:background="@drawable/bg_top_left_corner"
+        android:gravity="center"
+        android:paddingVertical="@dimen/fab_padding"
+        android:text="@string/_0"
+        android:textSize="@dimen/extra_padding"
+        app:layout_constraintStart_toEndOf="@+id/btnInfo"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset"
+        app:layout_constraintTop_toBottomOf="@id/btnInfo"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:gravity="center"
+        android:text="@string/avg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/textAvg"
+        app:layout_constraintStart_toStartOf="@id/textAvg"
+        app:layout_constraintTop_toBottomOf="@+id/textAvg"
+        tools:ignore="NestedWeights,SpUsage" />
+
+    <TextView
+        android:id="@+id/textMax"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_padding"
+        android:background="@drawable/bg_top_left_corner"
+        android:gravity="center"
+        android:paddingVertical="@dimen/fab_padding"
+        android:text="@string/_0"
+        android:textSize="@dimen/extra_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnReset"
+        tools:ignore="SpUsage" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/max"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/padding"
+        android:textStyle="bold"
+        android:textSize="@dimen/btn_text_size"
+        app:layout_constraintStart_toStartOf="@id/textMax"
+        app:layout_constraintEnd_toEndOf="@id/textMax"
+        app:layout_constraintTop_toBottomOf="@+id/textMax"
+        tools:ignore="NestedWeights,SpUsage" />
+
+    <TextView
+        android:id="@+id/btnInfo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_gradient_pink_circle"
+        android:layout_marginTop="@dimen/padding"
+        android:text="@string/info"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/speedAnalog"
+        app:layout_constraintTop_toBottomOf="@id/speedAnalog" />
+
+    <TextView
+        android:id="@+id/btnReset"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_gradient_pink_circle"
+        android:gravity="center"
+        android:text="@string/reset"
+        android:layout_marginTop="@dimen/padding"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/speedAnalog"
+        app:layout_constraintTop_toBottomOf="@id/speedAnalog" />
+
+    <FrameLayout
+        android:id="@+id/nativeAd"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/nothing"
+        android:elevation="@dimen/padding"
+        android:visibility="gone"
+        android:layout_margin="@dimen/less_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

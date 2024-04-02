@@ -1,0 +1,28 @@
+<resources>
+    <color name="red">#FF0000</color>
+    <color name="pink">#FF70B5</color>
+<!--    <color name="blue">#029AF9</color>-->
+    <color name="blue">#282b4e</color>
+    <color name="green">#00FF3C</color>
+    <color name="yellow">#FFCC00</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_600">#757575</color>
+    <color name="nothing">#00000000</color>
+    <color name="light_pink">#FEB39D</color>
+    <color name="bad_sensor">#E91E63</color>
+    <color name="light_yellow">#FFAF74</color>
+    <color name="low_accuracy">#FF9800</color>
+    <color name="high_accuracy">#8BC34A</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="medium_accuracy">#FFEB3B</color>
+    <color name="absent_sensor">#ffa0a0a0</color>
+    <color name="background_color">#282b4e</color>
+    <color name="light_blue">#636998</color>
+    <color name="old_light_blue">#636998</color>
+    <color name="translucent_black">#55000000</color>
+    <color name="bg_blue">#282B4E</color>
+</resources>

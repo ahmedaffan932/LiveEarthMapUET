@@ -1,0 +1,135 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.liveearthmapuet'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.earthmap.satelliteview.streetview.mapsandnavigation.liveearthmap.gps"
+        minSdk 27
+        targetSdk 33
+        versionCode 18
+        versionName "3.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            resValue "string", "product_id", "com.earthmap.satelliteview.streetview.mapsandnavigation.liveearthmap.gps"
+
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            resValue "string", "product_id", "android.test.purchased"
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation project(path: ':country_data')
+
+    implementation 'com.mapbox.maps:android:10.0.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.5.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-places-v9:0.12.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-building-v9:0.7.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-services:5.8.0'
+
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation:0.42.6'
+    implementation('com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.42.6') {
+        transitive = true
+    }
+
+    implementation "com.mapbox.search:mapbox-search-android-ui:1.0.0-beta.21"
+
+    implementation "com.github.tarek360:instacapture:2.0.1"
+
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC2'
+
+    implementation 'com.github.arbelkilani:Compass-View:v1.1.1'
+
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation 'com.github.smart-fun:XmlToJson:1.4.5'
+
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.0'
+    implementation 'com.google.firebase:firebase-config-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.28.3'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation platform('com.google.firebase:firebase-bom:29.0.2')
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-core:20.0.0'
+
+
+    implementation "androidx.camera:camera-view:1.0.0-alpha29"
+    implementation 'androidx.camera:camera-camera2:1.1.0-alpha09'
+    implementation "androidx.camera:camera-lifecycle:1.1.0-alpha09"
+
+    implementation 'com.anjlab.android.iab.v3:library:2.0.3'
+
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
+    implementation 'com.google.zxing:core:3.3.2'
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    implementation 'com.github.anastr:speedviewlib:1.5.52'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+
+    implementation 'com.airbnb.android:lottie:4.2.1'
+
+    implementation 'com.google.android.gms:play-services-ads:20.6.0'
+
+    implementation 'com.github.soenkegissel:ConstraintRadioGroup:a669100077'
+
+    implementation("com.google.android.ump:user-messaging-platform:2.1.0")
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // glide
+    implementation "com.github.bumptech.glide:glide:4.13.0"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.13.0"
+
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation("androidx.mediarouter:mediarouter:1.2.5")
+}

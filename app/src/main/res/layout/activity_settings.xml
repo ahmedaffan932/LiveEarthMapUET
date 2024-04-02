@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".SettingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/fab_padding"
+        android:background="@drawable/bg_gradient_pink"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/btnBackSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_nothing"
+            android:padding="@dimen/fab_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/btnBackSettings"
+            app:layout_constraintTop_toTopOf="@id/btnBackSettings" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/fab_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUpgradeToPremium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/fab_padding"
+                android:layout_marginTop="@dimen/fab_padding"
+                android:background="@drawable/bg_top_right_corner"
+                android:elevation="@dimen/fab_padding"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/extra_padding"
+                android:paddingVertical="@dimen/fab_padding"
+                android:text="@string/upgrade_to_pro"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_baseline_navigate_next_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <LinearLayout
+                android:id="@+id/llShareApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/fab_padding"
+                android:layout_marginTop="@dimen/padding"
+                android:background="@drawable/bg_top_right_corner"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/extra_padding"
+                android:paddingVertical="@dimen/fab_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fab_padding"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/ic_baseline_share_24"
+                    app:tint="@color/yellow" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/share_app"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUpgradeToPremium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/fab_padding"
+                android:layout_marginTop="@dimen/padding"
+                android:background="@drawable/bg_top_right_corner"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/extra_padding"
+                android:paddingVertical="@dimen/fab_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fab_padding"
+                    app:srcCompat="@drawable/ic_baseline_feedback_24"
+                    app:tint="@color/yellow" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/feedback"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUpgradeToPremium" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/adFrameLayoutNative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/fab_padding"
+                android:layout_marginTop="@dimen/padding" />
+
+            <LinearLayout
+                android:id="@+id/llRateUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/fab_padding"
+                android:layout_marginTop="@dimen/padding"
+                android:background="@drawable/bg_top_right_corner"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/extra_padding"
+                android:paddingVertical="@dimen/fab_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fab_padding"
+                    app:srcCompat="@drawable/ic_baseline_star_24"
+                    app:tint="@color/yellow" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/rate_us"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUpgradeToPremium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/fab_padding"
+                android:layout_marginTop="@dimen/padding"
+                android:background="@drawable/bg_top_right_corner"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/extra_padding"
+                android:paddingVertical="@dimen/fab_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fab_padding"
+                    app:srcCompat="@drawable/ic_baseline_privacy_tip_24"
+                    app:tint="@color/yellow" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUpgradeToPremium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMoreApps"
+                android:elevation="2dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding"
+                android:paddingHorizontal="@dimen/extra_padding"
+                android:background="@drawable/bg_top_right_corner"
+                android:layout_marginHorizontal="@dimen/fab_padding"
+                android:paddingVertical="@dimen/fab_padding">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="@dimen/fab_padding"
+                    app:srcCompat="@drawable/advertising"
+                    app:tint="@color/yellow" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/more_applications"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_navigate_next_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUpgradeToPremium" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+<!--    <com.google.android.ads.nativetemplates.TemplateView-->
+<!--        android:id="@+id/nativeAdViewSetting"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:background="@color/nothing"-->
+<!--        android:layout_margin="@dimen/padding"-->
+<!--        android:visibility="gone"-->
+<!--        android:minHeight="400dp"-->
+<!--        app:gnt_template_type="@layout/custom_native"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/scrollView" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

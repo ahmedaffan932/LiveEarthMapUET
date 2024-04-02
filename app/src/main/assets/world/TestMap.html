@@ -1,0 +1,81 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/black.js"></script>
+
+<script>
+  var map = AmCharts.makeChart("chartdiv", {
+      "type": "map",
+      "theme": "black",
+      "panEventsEnabled": true,
+      "backgroundColor": "#282b4e",
+      "backgroundAlpha": 1,
+      "dataProvider": {
+          "map": "worldLow",
+          "getAreasFromMap": true
+      },
+      "areasSettings": {
+          "autoZoom": false,
+          "color": "#CDCDCD",
+          "colorSolid": "#5EB7DE",
+          // "selectedColor": "#5EB7DE",
+          // "selectedColor": "#000",
+          "outlineColor": "#666666",
+          "rollOverColor": "#ffffff",
+          "rollOverOutlineColor": "#FFFFFF",
+          "selectable": true
+      },
+      "listeners": [{
+          "event": "clickMapObject",
+          "method": function(event) {
+              map.selectedObject = map.dataProvider;
+
+              for (var i in map.dataProvider.areas) {
+                  var area = map.dataProvider.areas[i];
+                  area.showAsSelected = false
+              }
+
+              event.mapObject.showAsSelected = true
+
+              map.returnInitialColor(event.mapObject);
+              var states = [];
+              for (var i in map.dataProvider.areas) {
+                  var area = map.dataProvider.areas[i];
+                  if (area.showAsSelected) {
+                      //set a new color only if it wasn't assigned before
+                      area.selectedColor = "#000"
+                      console.log(area)
+                  }
+              }
+
+              event.mapObject.autoZoom = true
+
+              // set same zoom levels to retain map position/zoom in case a selection was made after a zoom
+              map.dataProvider.zoomLevel = map.zoomLevel();
+              map.dataProvider.zoomLatitude = event.zoomLatitude;
+              map.dataProvider.zoomLongitude = event.zoomLongitude;
+              map.validateNow(); //redraw the map with the new selection/colors.
+          }
+      }],
+      "export": {
+          "enabled": false
+      }
+  });
+
+
+function zoomCountry(str){
+  console.log(map.getAreaById("PK"))
+}
+
+  </script>
+<style>
+  #chartdiv {
+    width: 100%;
+    height: 500px;
+  }
+  </style>
+<div id="chartdiv"></div>
+<button onclick="zoomCountary('PK')">Pakistan</button>

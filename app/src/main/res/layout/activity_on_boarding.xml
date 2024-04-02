@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".OnBoardingActivity">
+
+    <TextView
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="@dimen/less_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        android:text="Skip"
+        android:layout_margin="@dimen/fab_padding"
+        android:background="@drawable/bg_less_rounded"
+        android:paddingHorizontal="@dimen/fab_padding"
+        android:paddingVertical="@dimen/less_padding"
+        android:backgroundTint="@color/white"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/extra_padding"
+        android:background="@drawable/bg_transparent_white_rounded"
+        android:padding="@dimen/fab_padding"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout_point"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginBottom="@dimen/fab_padding"
+            app:tabBackground="@drawable/tab_selector_carousel_point"
+            app:tabIndicatorHeight="0dp"
+            app:tabPaddingEnd="4dp"/>
+
+        <TextView
+            android:id="@id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/_18sdp"
+            android:text="@string/satellite_view"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/fab_padding"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/_13sdp"
+            android:text="@string/satellite_view_maps_offer_comprehensive_aerial_imagery_of_the_earth_s_surface_facilitating_navigation_urban_planning_and_environmental_monitoring"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnNext"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@drawable/bg_border_round_blue"
+        android:text="Next"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/extra_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llMain"
+        app:layout_constraintBottom_toBottomOf="@id/llMain"/>
+
+    <FrameLayout
+        android:id="@+id/nativeAdFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/padding"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

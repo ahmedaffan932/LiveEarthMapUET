@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AppLanguageSelectorActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_blue"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fab_padding"
+            android:text="@string/languages"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fab_padding"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <in.daemondhruv.customviewgroup.ConstraintRadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clTopBar">
+
+        <RadioButton
+            android:id="@+id/rbEnglish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/fab_padding"
+            android:layout_marginTop="@dimen/fab_padding"
+            android:layout_marginEnd="@dimen/padding"
+            android:background="@drawable/bg_blue_ripple_rounded"
+            android:backgroundTint="@color/white"
+            android:button="@null"
+            android:buttonTint="@color/blue"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:drawableTint="@color/blue"
+            android:elevation="@dimen/less_padding"
+            android:paddingVertical="@dimen/fab_padding"
+            android:paddingLeft="60dp"
+            android:tag="en"
+            android:text="English"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/padding"
+            android:elevation="@dimen/padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/us_flag"
+            app:layout_constraintBottom_toBottomOf="@id/rbEnglish"
+            app:layout_constraintStart_toStartOf="@id/rbEnglish"
+            app:layout_constraintTop_toTopOf="@id/rbEnglish"
+            app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+        <RadioButton
+            android:id="@+id/rbFrench"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/fab_padding"
+            android:layout_marginTop="@dimen/fab_padding"
+            android:layout_marginEnd="@dimen/padding"
+            android:layout_marginBottom="@dimen/padding"
+            android:background="@drawable/bg_blue_ripple_rounded"
+            android:backgroundTint="@color/white"
+            android:button="@null"
+            android:buttonTint="@color/blue"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:drawableTint="@color/blue"
+            android:elevation="@dimen/less_padding"
+            android:paddingVertical="@dimen/fab_padding"
+            android:paddingLeft="60dp"
+            android:tag="fr"
+            android:text="Français"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rbEnglish" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/padding"
+            android:elevation="@dimen/padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/fr"
+            app:layout_constraintBottom_toBottomOf="@id/rbFrench"
+            app:layout_constraintStart_toStartOf="@id/rbFrench"
+            app:layout_constraintTop_toTopOf="@id/rbFrench"
+            app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+        <RadioButton
+            android:id="@+id/rbGerman"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/fab_padding"
+            android:layout_marginTop="@dimen/fab_padding"
+            android:layout_marginEnd="@dimen/padding"
+            android:layout_marginBottom="@dimen/padding"
+            android:background="@drawable/bg_blue_ripple_rounded"
+            android:backgroundTint="@color/white"
+            android:button="@null"
+            android:buttonTint="@color/blue"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:drawableTint="@color/blue"
+            android:elevation="@dimen/less_padding"
+            android:paddingVertical="@dimen/fab_padding"
+            android:paddingLeft="60dp"
+            android:tag="de"
+            android:text="Deutsch"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rbFrench" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/padding"
+            android:elevation="@dimen/padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/de"
+            app:layout_constraintBottom_toBottomOf="@id/rbGerman"
+            app:layout_constraintStart_toStartOf="@id/rbGerman"
+            app:layout_constraintTop_toTopOf="@id/rbGerman"
+            app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+        <RadioButton
+            android:id="@+id/rbSpanish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginVertical="@dimen/fab_padding"
+            android:layout_marginStart="@dimen/fab_padding"
+            android:layout_marginEnd="@dimen/padding"
+            android:background="@drawable/bg_blue_ripple_rounded"
+            android:backgroundTint="@color/white"
+            android:button="@null"
+            android:buttonTint="@color/blue"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:drawableTint="@color/blue"
+            android:elevation="@dimen/less_padding"
+            android:paddingVertical="@dimen/fab_padding"
+            android:paddingLeft="60dp"
+            android:tag="es"
+            android:text="Española"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rbGerman" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/padding"
+            android:elevation="@dimen/padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/es"
+            app:layout_constraintBottom_toBottomOf="@id/rbSpanish"
+            app:layout_constraintStart_toStartOf="@id/rbSpanish"
+            app:layout_constraintTop_toTopOf="@id/rbSpanish"
+            app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <RadioButton
+            android:id="@+id/rbArabic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_marginTop="@dimen/fab_padding"
+            android:layout_marginEnd="@dimen/fab_padding"
+            android:layout_marginBottom="@dimen/padding"
+            android:background="@drawable/bg_blue_ripple_rounded"
+            android:backgroundTint="@color/white"
+            android:button="@null"
+            android:buttonTint="@color/blue"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:drawableTint="@color/blue"
+            android:elevation="@dimen/less_padding"
+            android:paddingVertical="@dimen/fab_padding"
+            android:paddingLeft="60dp"
+            android:tag="ar"
+            android:text="عربي"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/padding"
+            android:elevation="@dimen/padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/sa"
+            app:layout_constraintBottom_toBottomOf="@id/rbArabic"
+            app:layout_constraintStart_toStartOf="@id/rbArabic"
+            app:layout_constraintTop_toTopOf="@id/rbArabic"
+            app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+        <RadioButton
+            android:id="@+id/rbHindi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_marginTop="@dimen/fab_padding"
+            android:layout_marginEnd="@dimen/fab_padding"
+            android:layout_marginBottom="@dimen/padding"
+            android:background="@drawable/bg_blue_ripple_rounded"
+            android:backgroundTint="@color/white"
+            android:button="@null"
+            android:buttonTint="@color/blue"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:drawableTint="@color/blue"
+            android:elevation="@dimen/less_padding"
+            android:paddingVertical="@dimen/fab_padding"
+            android:paddingLeft="60dp"
+            android:tag="hi"
+            android:text="हिंदी"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintTop_toBottomOf="@id/rbArabic" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/padding"
+            android:elevation="@dimen/padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/in"
+            app:layout_constraintBottom_toBottomOf="@id/rbHindi"
+            app:layout_constraintStart_toStartOf="@id/rbHindi"
+            app:layout_constraintTop_toTopOf="@id/rbHindi"
+            app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+        <RadioButton
+            android:id="@+id/rbTurkish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_marginTop="@dimen/fab_padding"
+            android:layout_marginEnd="@dimen/fab_padding"
+            android:layout_marginBottom="@dimen/padding"
+            android:background="@drawable/bg_blue_ripple_rounded"
+            android:backgroundTint="@color/white"
+            android:button="@null"
+            android:buttonTint="@color/blue"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:drawableTint="@color/blue"
+            android:elevation="@dimen/less_padding"
+            android:paddingVertical="@dimen/fab_padding"
+            android:paddingLeft="60dp"
+            android:tag="tr"
+            android:text="Türkçe"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintTop_toBottomOf="@id/rbHindi" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/padding"
+            android:elevation="@dimen/padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/tr"
+            app:layout_constraintBottom_toBottomOf="@id/rbTurkish"
+            app:layout_constraintStart_toStartOf="@id/rbTurkish"
+            app:layout_constraintTop_toTopOf="@id/rbTurkish"
+            app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+        <RadioButton
+            android:id="@+id/rbKorean"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginVertical="@dimen/fab_padding"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_marginEnd="@dimen/fab_padding"
+            android:background="@drawable/bg_blue_ripple_rounded"
+            android:backgroundTint="@color/white"
+            android:button="@null"
+            android:buttonTint="@color/blue"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:drawableTint="@color/blue"
+            android:elevation="@dimen/less_padding"
+            android:paddingVertical="@dimen/fab_padding"
+            android:paddingLeft="60dp"
+            android:tag="kr"
+            android:text="한국인"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintTop_toBottomOf="@id/rbTurkish" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/padding"
+            android:elevation="@dimen/padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/kr_flag"
+            app:layout_constraintBottom_toBottomOf="@id/rbKorean"
+            app:layout_constraintStart_toStartOf="@id/rbKorean"
+            app:layout_constraintTop_toTopOf="@id/rbKorean"
+            app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+
+    </in.daemondhruv.customviewgroup.ConstraintRadioGroup>
+
+    <FrameLayout
+        android:id="@+id/nativeAdFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_margin="@dimen/fab_padding"
+        android:background="@drawable/bg_less_rounded"
+        android:backgroundTint="#CAD6F0"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding"
+                android:background="@drawable/bg_borderd_ad"
+                android:backgroundTint="@color/red"
+                android:elevation="@dimen/padding"
+                android:padding="@dimen/less_padding"
+                android:text="@string/ad"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding"
+                android:layout_marginHorizontal="@dimen/extra_padding"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:id="@+id/ad_call_to_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_border_round_blue"
+                    android:backgroundTint="@color/blue"
+                    android:gravity="center"
+                    android:minWidth="120dp"
+                    android:paddingHorizontal="@dimen/fab_padding"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,377 @@
+<resources>
+    <string name="menu_settings" translatable="false">Settings</string>
+    <string name="menu_search" translatable="false">Search</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="go" translatable="false">Go!</string>
+    <string name="location_prefs" translatable="false">Location Settings</string>
+    <string name="force_gps_pref" translatable="false">Always use GPS</string>
+    <string name="force_gps_pref_hint" translatable="false" translation_description="this string continues from \'Always use GPS\'">if enabled, even if network location is available</string>
+    <string name="no_use_gps_pref" translatable="false">Set location manually</string>
+    <string name="no_use_gps_pref_hint" translatable="false">Enter a place or a lat/long below</string>
+    <string name="location_placename" translatable="false">Place name</string>
+    <string name="location_placename_hint" translatable="false" translation_description="An example address.  Translators: please pick an address suitable for your country.  If it has an astronomical connection (e.g. the address of an observatory or famous astronomer) then that would be even better.">e.g. 1400 West Mars Hill Road, Flagstaff, AZ.</string>
+    <string name="location_lat_pref" translatable="false">Latitude</string>
+    <string name="location_long_pref" translatable="false">Longitude</string>
+    <string name="degrees" translatable="false" translation_description="angular degrees">Degrees</string>
+    <string name="preferences" translatable="false">preferences</string>
+    <string name="location_no_auto" translatable="false">Auto-location permission is disabled on your phone.   You can set the location manually in preferences.  Until then the map will be incorrect.</string>
+    <string name="location_offer_to_enable" translatable="false">Auto-location is disabled.  Would you like to enable it?</string>
+    <string name="location_offer_to_enable_gps_title" translatable="false">Auto-location disabled</string>
+    <string name="location_set_auto" translatable="false">Location set from %1$s to %2$s</string>
+    <string name="location_unable_to_geocode" translatable="false">Unable to decode your location - perhaps your network isn\'t available?</string>
+    <string name="location_not_found_title" translatable="false" translation_description="dialog box title when location not found">Sorry</string>
+    <string name="location_not_found" translatable="false" translation_description="dialog message when placename not found">%s not found.</string>
+    <string name="location_long_lat" translatable="false">Longitude:%1$s, Latitude:%2$s</string>
+    <string name="location_place_found" translatable="false">Place found.  Setting latitude %1$f and longitude %2$f</string>
+    <string name="use_magnetic_correction" translatable="false">Use magnetic correction</string>
+    <!-- This string is too long and currently unused -->
+    <string name="show_stars_pref" translatable="false">Stars</string>
+    <string name="show_constellations_pref" translatable="false">Constellations</string>
+    <string name="show_messier_objects_pref" translatable="false" translation_description="The celestial objects catalogued by Charles Messier">Messier Objects</string>
+    <string name="show_planets_pref" translatable="false">Solar System</string>
+    <string name="show_grid_pref" translatable="false">RA/Dec Grid</string>
+    <string name="show_horizon_pref" translatable="false">Horizon</string>
+    <string name="show_sky_gradient" translatable="false" translation_description="This is a shading of the color of the sky used for effect">Sky Gradient</string>
+    <string name="show_meteors_pref" translatable="false">Meteor Showers</string>
+    <string name="show_satellite_layer_pref" translatable="false" translation_description="The layer for satellites">Satellites</string>
+    <!-- Just in case we decide to have such a layer for the 4/24 launch -->
+    <string name="sensor_prefs" translatable="false">Sensor Settings (experts)</string>
+    <string name="sensor_speed" translatable="false" translation_description="Old, non gyro sensors only: How quickly the sensor should send us data">Sensor Speed</string>
+    <string name="sensor_damping" translatable="false" translation_description="Old, non gyro sensors only: The amount of smoothing applied to the sensor outputs.">Damping</string>
+    <string name="ecliptic" translatable="false">Ecliptic</string>
+    <string name="malformed_loc_error" translatable="false">Latitude or longitude setting isn\'t a number.</string>
+    <string name="dialog_accept" translatable="false" translation_description="accepting the licence agreement">Accept</string>
+    <string name="dialog_decline" translatable="false" translation_description="declining the licence agreement">No Thanks</string>
+    <string name="dialog_ok_button" translatable="false">OK</string>
+    <string name="menu_help" translatable="false" translation_description="menu item to show \'Help\' box">Help</string>
+    <string name="help_dialog_title" translatable="false">Help for Sky Map</string>
+    <string name="set_manual" translatable="false">Switching to manual mode</string>
+    <string name="set_auto" translatable="false">Switching to automatic mode</string>
+    <string name="menu_toggle_dim" translatable="false">Toggle night mode</string>
+    <string name="zenith" translatable="false">ZENITH</string>
+    <string name="nadir" translatable="false">NADIR</string>
+    <string name="north" translatable="false">NORTH</string>
+    <string name="east" translatable="false">EAST</string>
+    <string name="west" translatable="false">WEST</string>
+    <string name="south" translatable="false">SOUTH</string>
+    <string name="search_label" translatable="false">Search the Sky</string>
+    <string name="search_hint" translatable="false" translation_description="an example search target">e.g. Mars</string>
+    <string name="no_search_title" translatable="false">No results</string>
+    <string name="no_search_results_text" translatable="false">No results were found.</string>
+    <string name="many_search_results_title" translatable="false">Did you mean?</string>
+    <string name="menu_time" translatable="false">Time Travel</string>
+    <string name="time_travel_start_message_alt" translatable="false">Traveling through time to %s ...</string>
+    <string name="time_travel_close_message" translatable="false">Back to the present ...</string>
+    <!--  -->
+    <string name="popular_dates_prompt" translatable="false" translation_description="Label for a list of dates the user can choose from">Popular dates</string>
+    <string name="custom_date_prompt" translatable="false" translation_description="Label telling the user to manually specify a date">Or select your own date:</string>
+    <string name="change_date_prompt" translatable="false">Change the date</string>
+    <string name="change_time_prompt" translatable="false">Change the time</string>
+    <string name="now_visiting" translatable="false" translation_description="used in time travel dialog to tell the user what time they are visiting, time formatted as yyyy.mm.dd at hh.mm.ss + timezone">
+        Now visiting: %s</string>
+    <string name="time_travel_label_past" translatable="false" translation_description="Label showing that we are in the past">Time Travel: Past</string>
+    <string name="time_travel_label_future" translatable="false" translation_description="Label showing that we are in the future">Time Travel: Future</string>
+    <string name="time_travel_stopped" translatable="false" translation_description="Label showing rate of travel through time">Time travel frozen</string>
+    <string name="time_travel_second_speed" translatable="false" translation_description="Label showing rate of travel through time.  The symbol means greater than.">Traveling &gt; @ 1 sec/sec</string>
+    <string name="time_travel_minute_speed" translatable="false" translation_description="Label showing rate of travel through time">Traveling &gt; @ 1 min/sec</string>
+    <string name="time_travel_10minute_speed" translatable="false" translation_description="Label showing rate of travel through time">Traveling &gt; @ 10 min/sec</string>
+    <string name="time_travel_hour_speed" translatable="false" translation_description="Label showing rate of travel through time">Traveling &gt; @ 1 hour/sec</string>
+    <string name="time_travel_day_speed" translatable="false" translation_description="Label showing rate of travel through time">Traveling &gt; @ 1 day/sec</string>
+    <string name="time_travel_week_speed" translatable="false" translation_description="Label showing rate of travel through time">Traveling &gt; @ 1 week/sec</string>
+    <string name="time_travel_second_speed_back" translatable="false" translation_description="Label showing rate of travel through time">Traveling &lt; @ 1 sec/sec</string>
+    <string name="time_travel_minute_speed_back" translatable="false" translation_description="Label showing rate of travel through time">Traveling &lt; @ 1 min/sec</string>
+    <string name="time_travel_10minute_speed_back" translatable="false" translation_description="Label showing rate of travel through time">Traveling &lt; @ 10 min/sec</string>
+    <string name="time_travel_hour_speed_back" translatable="false" translation_description="Label showing rate of travel through time">Traveling &lt; @ 1 hour/sec</string>
+    <string name="time_travel_day_speed_back" translatable="false" translation_description="Label showing rate of travel through time">Traveling &lt; @ 1 day/sec</string>
+    <string name="time_travel_week_speed_back" translatable="false" translation_description="Label showing rate of travel through time">Traveling &lt; @ 1 week/sec</string>
+    <string name="use_sound_effects" translatable="false" translation_description="A preferences menu label">Enable sound</string>
+
+    <string name="menu_gallery" translatable="false">Gallery</string>
+    <string name="gallery_image_search_btn" translatable="false">Find in sky</string>
+    <string name="gallery_image_back_btn" translatable="false">Back to gallery</string>
+    <string name="hubble_image_gallery_title" translatable="false">Sky Map Gallery</string>
+    <!--  TODO(johntaylor): currently unused -->
+
+    <string name="search_overlay_title" translatable="false" translation_description="title for search overlay">Point your phone toward the arrow</string>
+    <string name="search_target_looking_message" translatable="false" translation_description="displayed when a search target is being searched for">Looking for:</string>
+    <string name="sun_wont_set_message" translatable="false">The sun will not set during the next 24 hours at your current location.</string>
+
+    <string name="missing_label" translatable="false" translation_description="Used to indicate to the developer that they've added a resource with no translation.">MISSING_LBL</string>
+
+    <string name="sun" translatable="false">Sun</string>
+    <string name="moon" translatable="false">Moon</string>
+    <string name="mercury" translatable="false">Mercury</string>
+    <string name="venus" translatable="false">Venus</string>
+    <string name="mars" translatable="false">Mars</string>
+    <string name="jupiter" translatable="false">Jupiter</string>
+    <string name="saturn" translatable="false">Saturn</string>
+    <string name="uranus" translatable="false">Uranus</string>
+    <string name="neptune" translatable="false">Neptune</string>
+    <string name="pluto" translatable="false">Pluto</string>
+    <string name="crab_nebula" translatable="false" translation_description="hubble object">Crab Nebula</string>
+    <string name="eagle_nebula" translatable="false" translation_description="hubble object">Eagle Nebula</string>
+    <string name="andromeda_galaxy" translatable="false" translation_description="hubble object">Andromeda Galaxy</string>
+    <string name="orion_nebula" translatable="false" translation_description="hubble object">Orion Nebula</string>
+    <string name="whirlpool_galaxy" translatable="false" translation_description="hubble object">Whirlpool Galaxy</string>
+    <string name="ring_nebula" translatable="false" translation_description="hubble object">Ring Nebula</string>
+    <string name="pinwheel_galaxy" translatable="false" translation_description="hubble object">Pinwheel Galaxy</string>
+    <string name="sombrero_galaxy" translatable="false" translation_description="hubble object">Sombrero Galaxy</string>
+    <string name="hercules_gc" translatable="false" translation_description="hubble object">Hercules Globular Cluster</string>
+    <string name="pleiades" translatable="false" translation_description="hubble object">Pleiades</string>
+    <string name="cats_eye_nebula" translatable="false" translation_description="hubble object">Cat\'s Eye Nebula</string>
+    <string name="omega_centauri" translatable="false" translation_description="hubble object">Omega Centauri Globular Cluster</string>
+    <string name="v838_mon" translatable="false" translation_description="hubble object">V838 Monocerotis</string>
+    <string name="hubble_deep_field" translatable="false" translation_description="hubble object">Hubble Deep Field</string>
+    <string name="menu_tos" translatable="false">Terms of Service</string>
+    <string name="menu_diagnostics" translatable="false">Diagnostics</string>
+
+    <string name="north_pole" translatable="false">NP</string>
+    <string name="south_pole" translatable="false">SP</string>
+
+    <string name="space_station" translatable="false" translation_description="Name of the Internation Space Station">International Space Station</string>
+    <string name="enable_analytics" translatable="false">Send usage statistics</string>
+    <string name="enable_analytics_desc" translatable="false">Make Sky Map better by sending anonymous data to Google Analytics</string>
+    <string name="leonids" translatable="false" translation_description="Meteor Shower">Leonids</string>
+    <string name="geminids" translatable="false" translation_description="Meteor Shower">Geminids</string>
+    <string name="quadrantids" translatable="false" translation_description="Meteor Shower">Quadrantids</string>
+    <string name="lyrids" translatable="false" translation_description="Meteor Shower">Lyrids</string>
+    <string name="aquariids" translatable="false" translation_description="Meteor Shower">Eta Aquariids</string>
+    <string name="deltaaquariids" translatable="false" translation_description="Meteor Shower">Delta Aquariids</string>
+    <string name="perseids" translatable="false" translation_description="Meteor Shower">Perseids</string>
+    <string name="orionids" translatable="false" translation_description="Meteor Shower">Orionids</string>
+    <string name="puppidvelids" translatable="false" translation_description="Meteor Shower">Puppid-Velids</string>
+    <string name="ursids" translatable="false" translation_description="Meteor Shower">Ursids</string>
+
+    <string name="no_sensor_warning" translatable="false">Your device may lack orientation sensors - automode may not work</string>
+    <string name="warning_dialog_title" translatable="false">Bad news!</string>
+    <string name="missing_sensor_dialog_text" translatable="false">\n
+        Unfortunately your device might not have one of the
+    sensors that Sky Map needs.\n\n
+        To show you the sky in the direction your phone is pointing Sky Map
+    needs both a built-in compass and an accelerometer.  Your device reports that it is missing
+        one of them.  The good news is that some devices (for example some Moto E phones) falsely claim
+        not to have a compass but actually do.\n\n
+
+        If your device really is missing a sensor then auto-mode will not work.  However, you
+        can still use Sky Map on this device in manual mode where you drag, rotate and stretch the
+        map with your fingers.
+    </string>
+    <string name="do_not_show_again" translatable="false">Do not show this message again</string>
+    <string name="title_activity_diagnostic" translatable="false">Diagnostics</string>
+    <string name="location_rationale_title" translatable="false">Why do we ask for your location?</string>
+    <string name="location_rationale_text" translatable="false">The stars you can see depend on where on planet earth you are.  Without your location we cannot show you an accurate map.  If you do not want your phone to give us your location you can provide it manually in the settings.  You need only provide the nearest city.</string>
+    <string name="sensor_absent" translatable="false">Absent</string>
+    <string name="sensor_accuracy_unknown" translatable="false">Accuracy: Unknown</string>
+    <string name="sensor_accuracy_unreliable" translatable="false">Accuracy: Unreliable</string>
+    <string name="sensor_accuracy_low" translatable="false">Accuracy: Low</string>
+    <string name="sensor_accuracy_medium" translatable="false">Accuracy: Medium</string>
+    <string name="sensor_accuracy_high" translatable="false">Accuracy: High</string>
+    <string name="sensor_accuracy_nocontact" translatable="false">Accuracy: No contact</string>
+    <string name="diagnostics_activity_general_heading" translatable="false">General</string>
+    <string name="diagnostics_activity_phone" translatable="false">Device</string>
+    <string name="diagnostics_activity_android_version" translatable="false">Android version</string>
+    <string name="diagnostics_activity_sky_map_version" translatable="false">Sky Map version</string>
+    <string name="diagnostics_activity_sensors_heading" translatable="false">Sensors</string>
+    <string name="diagnostics_activity_compass" translatable="false">Compass</string>
+    <string name="diagnostics_activity_accelerometer" translatable="false">Accelerometer</string>
+    <string name="diagnostics_activity_rotation_vector" translatable="false">Rotation</string>
+    <string name="diagnostics_activity_gyroscope" translatable="false">Gyroscope</string>
+    <string name="diagnostics_activity_light_level" translatable="false">Light level</string>
+    <string name="diagnostics_activity_location_and_time_heading" translatable="false">Location and Time</string>
+    <string name="diagnostics_activity_gps" translatable="false">GPS</string>
+    <string name="diagnostics_activity_location" translatable="false">Location (lat, long)</string>
+    <string name="diagnostics_activity_pointing_ra_dec" translatable="false">Pointing snapshot</string>
+    <string name="diagnostics_activity_magnetic_correction" translatable="false">Mag correction</string>
+    <string name="diagnostics_activity_local_datetime" translatable="false">Local datetime</string>
+    <string name="diagnostics_activity_universal_time" translatable="false">Universal datetime</string>
+    <string name="diagnostics_activity_network_heading" translatable="false">Network</string>
+    <string name="diagnostics_activity_connection" translatable="false">Connection</string>
+    <string name="diagnostics_activity_rotation_matrix" translatable="false">Rot Matrix</string>
+    <string name="enabled" translatable="false">Enabled</string>
+    <string name="disabled" translatable="false">Disabled</string>
+    <string name="permission_disabled" translatable="false">Permission disabled</string>
+    <string name="no_gps" translatable="false">No GPS</string>
+    <string name="connected" translatable="false">Connected</string>
+    <string name="disconnected" translatable="false">Disconnected</string>
+    <string name="wifi" translatable="false">" (wifi)"</string>
+    <string name="cell_network" translatable="false">" (cell)"</string>
+    <string name="menu_calibrate" translatable="false">Calibrate</string>
+    <string name="compass_calibration_activity_heading_compass" translatable="false">Compass -</string>
+    <string name="compass_calibration_activity_do_not_show_this_again" translatable="false">Do not show this again</string>
+    <string name="compass_calibration_activity_warning" translatable="false">Your compass needs to be calibrated</string>
+    <string name="sensor_reverse_preference_title" translatable="false">Reverse Magnetic Z</string>
+    <string name="sensor_reverse_preference_summary" translatable="false">Fix for phones with incorrectly implemented sensors - requires restart</string>
+    <string name="whats_new_dialog_title" translatable="false">What\'s new</string>
+    <string name="disable_gyro_preference_title" translatable="false">Disable gyroscope</string>
+    <string name="disable_gyro_preference_summary" translatable="false">Not all devices have a gyro - if yours does then you\'ll get better results with it enabled and this box unchecked.  On the other hand if your device does not have a gyro then Sky Map will probably not work if you uncheck this box.</string>
+    <string name="rotate_horizon_preference_title" translatable="false">Rotate horizon</string>
+    <string name="rotate_horizon_preference_summary" translatable="false">Rotate by 90 degree horizon (for screens with forced landscape, such as smartglasses)</string>
+
+    <string name="spacer" translatable="false">Spacer</string>
+    <string name="mapbox_access_token" translatable="false">"sk.eyJ1IjoiYWhtZWRhZmZhbjkzMiIsImEiOiJja3YxdzVrZWkwNGl2MnBvYmJ6ZnFwOWIyIn0.sk2ShDEkkLCqvgnVNWz5Rg"</string>
+
+    <string name="app_name" translatable="false">Live Earth Map</string>
+    <string name="explore" translatable="false">Explore</string>
+    <string name="lorem_ispum_dollar_ist" translatable="false">Lorem ispum dollar ist</string>
+    <string name="world_quiz" translatable="false">World Quiz</string>
+    <string name="gps_map_nmap" translatable="false">GPS Map Cam</string>
+    <string name="note_cam" translatable="false">Note Cam</string>
+    <string name="compass" translatable="false">Compass</string>
+    <string name="user_location_permission_explanation" translatable="false">This app needs location permissions in order to show its functionality.</string>
+    <string name="user_location_permission_not_granted" translatable="false">You didn\'t grant location permissions.</string>
+
+    <string name="location_component_fragment_text" translatable="false">User\'s current location on a map fragment</string>
+    <string name="latitude" translatable="false">latitude</string>
+    <string name="longitude" translatable="false">longitude</string>
+    <string name="capital" translatable="false">Capital:</string>
+    <string name="_00_00_00" translatable="false">00:00:00</string>
+    <string name="tap_on_map_to_toggle_instruction" translatable="false">Tap on a circle and then marker to toggle. Tap elsewhere to reset to circles.</string>
+    <string name="satellite" translatable="false">Satellite</string>
+    <string name="default_string" translatable="false">Default</string>
+    <string name="terrain" translatable="false">Terrain</string>
+    <string name="hybrid" translatable="false">Hybrid</string>
+    <string name="location_qr" translatable="false">Location QR</string>
+    <string name="collection" translatable="false">Collection</string>
+    <string name="elevation" translatable="false">Elevation</string>
+    <string name="accuracy" translatable="false">Accuracy</string>
+    <string name="time" translatable="false">Time</string>
+    <string name="start" translatable="false">Start</string>
+    <string name="photo_note" translatable="false">Photo Note:</string>
+    <string name="note" translatable="false">Note: </string>
+    <string name="save" translatable="false">Save</string>
+    <string name="location" translatable="false">Location</string>
+    <string name="altitude" translatable="false">Altitude</string>
+    <string name="current_altitude" translatable="false">Current Altitude</string>
+    <string name="yes" translatable="false">Yes</string>
+    <string name="no" translatable="false">No</string>
+    <string name="_000" translatable="false">000</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="max_speed" translatable="false">Max Speed</string>
+    <string name="distance" translatable="false">Distance</string>
+    <string name="speedometer" translatable="false">Speedometer</string>
+    <string name="sky_map" translatable="false">Sky Map</string>
+    <string name="_10" translatable="false">10.</string>
+    <string name="pakistan" translatable="false">Pakistan</string>
+    <string name="population" translatable="false">Population:</string>
+    <string name="area" translatable="false">Area</string>
+    <string name="currency" translatable="false">Currency:</string>
+    <string name="country_list" translatable="false">Country List</string>
+    <string name="select_mode" translatable="false">Select Mode</string>
+    <string name="countries" translatable="false">Countries</string>
+    <string name="asia" translatable="false">Asia</string>
+    <string name="europe" translatable="false">Europe</string>
+    <string name="africa" translatable="false">Africa</string>
+    <string name="america" translatable="false">America</string>
+    <string name="oceania" translatable="false">Oceania</string>
+    <string name="world" translatable="false">World</string>
+    <string name="confirm" translatable="false">Confirm</string>
+    <string name="find" translatable="false">Find:</string>
+    <string name="correct" translatable="false">Correct !</string>
+    <string name="_0_30" translatable="false">0 / 30</string>
+    <string name="easy" translatable="false">Easy</string>
+    <string name="medium" translatable="false">Medium</string>
+    <string name="hard" translatable="false">Hard</string>
+    <string name="pro_player" translatable="false">Pro Player</string>
+    <string name="_0_70" translatable="false">0 / 70</string>
+    <string name="_0_236" translatable="false">0 / 236</string>
+    <string name="quiz_result" translatable="false">Quiz Result</string>
+    <string name="total_levels" translatable="false">Total Levels:</string>
+    <string name="correct_answers" translatable="false">Correct Answers</string>
+    <string name="false_answers" translatable="false">False Answers:</string>
+    <string name="back" translatable="false">Back</string>
+    <string name="quit" translatable="false">Quit ?</string>
+    <string name="do_you_really_want_to_quit" translatable="false">Do you really want to quit ?</string>
+    <string name="capitals" translatable="false">Capitals</string>
+    <string name="flags" translatable="false">Flags</string>
+    <string name="continents" translatable="false">Continents</string>
+    <string name="difficulty_level" translatable="false">Difficulty Level</string>
+    <string name="km_h" translatable="false">KM/H</string>
+    <string name="km" translatable="false">KM</string>
+    <string name="add_note" translatable="false">Add Note</string>
+    <string name="loading" translatable="false">Loading..</string>
+    <string name="live_earth_map" translatable="false">Live Earth Map</string>
+    <string name="noise_detector" translatable="false">Sound Meter</string>
+    <string name="view_world" translatable="false">View World</string>
+    <string name="close" translatable="false">Close</string>
+    <string name="min" translatable="false">Min</string>
+    <string name="avg" translatable="false">Avg</string>
+    <string name="info" translatable="false">Info</string>
+    <string name="reset" translatable="false">Reset</string>
+    <string name="max" translatable="false">Max</string>
+    <string name="currencies" translatable="false">Currencies</string>
+    <string name="unlock_to_n_pro_features" translatable="false">Unlock to \nPro Features</string>
+    <string name="if_you_unlock_you_will_access_to_n_ads_free_app_n_unlock_all_games_features_n_capture_unlimited_photos" translatable="false">If you unlock you will access to: \n \n \u2022 Ads free App \n \u2022 Unlock All games features \n \u2022 Capture unlimited photos \n \u2022 Get unlimited directions.\n \u2022 Get unlimited navigation.</string>
+    <string name="terms_and_condition" translatable="false">Terms &amp; Condition</string>
+    <string name="privacy_policy" translatable="false"><u>Privacy Policy</u></string>
+    <string name="unlock" translatable="false">Unlock</string>
+    <string name="upgrade_to_pro" translatable="false">Upgrade to Pro</string>
+    <string name="share_app" translatable="false">Share App</string>
+    <string name="feedback" translatable="false">Feedback</string>
+    <string name="rate_us" translatable="false">Rate us</string>
+    <string name="settings" translatable="false">Settings</string>
+    <string name="enter_your_topic_and_let_us_know_about_your_feedback" translatable="false">Enter your topic and let us know about your feedback.</string>
+    <string name="enter_topic_here" translatable="false">Enter topic here</string>
+    <string name="do_you_suggestion_or_found_some_bug_n_do_let_us_know_your_feedback" translatable="false">Do you suggest or found some bug and do let us know your feedback.</string>
+    <string name="publish_feedback" translatable="false">Publish Feedback</string>
+    <string name="write_your_suggestion" translatable="false">Write your suggestion</string>
+    <string name="did_you_enjoy_the_app" translatable="false">Did you enfoy the App ?</string>
+    <string name="start_navigation" translatable="false">Start Navigation</string>
+    <string name="street" translatable="false">Street</string>
+    <string name="_3d" translatable="false">3D</string>
+    <string name="traffic" translatable="false">Traffic</string>
+    <string name="qr" translatable="false">QR</string>
+    <string name="direction" translatable="false">Direction</string>
+    <string name="click_here_to_explore" translatable="false">Click here to explore</string>
+    <string name="more_applications" translatable="false">More application</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="get_premium_version" translatable="false">Get Premium Version</string>
+    <string name="share" translatable="false">Share</string>
+    <string name="ad">Ad</string>
+    <string name="altitude_meter">Altitude Meter</string>
+    <string name="explore_the_unknown_world">Explore the unknown world.</string>
+    <string name="allow_app_to_access_location">Please allow location permission to the app to proceed further to view your current location.</string>
+    <string name="allow_access">Allow Access</string>
+    <string name="loading_ad">Loading Ad</string>
+    <string name="_00">00%</string>
+    <string name="hot">Hot</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="exit">Exit</string>
+    <string name="pro_features">Pro Features</string>
+    <string name="billing_id">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAujKAuRSsOBeupTizEzEJprzT8ZBba12bbHN9bS4Fz3S8rmfRLC1VZ0MBb56tkq2JmuqAp1bmMRu2yYJGLCck5ZxV67QthUhYpWLccmEP89cdz6HgUtQvsihRAsO29JUOnaL/Zc+quFvf13+dHR/8tN4ySIFcQ6w29NxACbHdlUfngdEbaxrP/z8dk6bFkbGmNabH4DqDv3+gURWZuaT4OnK86dVLJRzoiGcG6wJJY4nxhj6gCh78O9rGbQkJi+hY4kQ+OMM0evOqTNVn4fSahFAGJmDya5nr57i9xREslI3JT7Y+vzNXDvJmNuqyLvAEzYZvUt/hdKzyy4MearU08QIDAQAB</string>
+    <string name="_79_99">$79.99</string>
+    <string name="your_device_does_not_support_compass">Your device does not support compass.</string>
+    <string name="your_gps_seems_to_be_disabled_do_you_want_to_enable_it">Your GPS seems to be disabled, do you want to enable it?</string>
+    <string name="please_select_valid_location">Please select valid location.</string>
+    <string name="your_free_navigation_limit_is_exceeded_would_you_like_upgrade">"Your free navigation limit is exceeded. Would you like upgrade? "</string>
+    <string name="may_be_later">May be later.</string>
+    <string name="address_not_found">Address not found</string>
+    <string name="no_routes_found_make_sure_you_set_the_right_user_and_access_token">No routes found, make sure you set the right user and access token.</string>
+    <string name="no_routes_found">No routes found</string>
+    <string name="screen_shot_saved_in_gallery">"Screen Shot Saved in Gallery. "</string>
+    <string name="location_permission_is_required">Location permission is required</string>
+    <string name="please_give_required_permission">Please give required permission.</string>
+    <string name="recording_permission_is_required_for_sound_meter">Recording Permission is required for Sound Meter</string>
+    <string name="please_enter_some_note">Please enter some note.</string>
+    <string name="save_photo">Save Photo</string>
+    <string name="there_is_some_problem_with_came_unable_to_start_it">There is some problem with came, Unable to start it.</string>
+    <string name="you_have_already_purchased">You have already Purchased</string>
+    <string name="your_qr_is_saved_in_gallery">Your QR is saved in gallery.</string>
+    <string name="sorry_some_error_occurred_in_qr_creation">Sorry some error occurred in QR creation.</string>
+    <string name="some_error_occurred_in_sending_email">Some error occurred in sending email.</string>
+    <string name="thanks">Thanks.</string>
+    <string name="stop">Stop</string>
+    <string name="easily_find_your_best_route_with_turn_by_turn_navigation">Easily find your best route with turn by turn navigation</string>
+    <string name="loading_ad_please_wait">Loading Ad, Please wait.</string>
+    <string name="languages">Languages</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="satellite_view_maps_offer_comprehensive_aerial_imagery_of_the_earth_s_surface_facilitating_navigation_urban_planning_and_environmental_monitoring">Satellite view maps offer comprehensive aerial imagery of the Earth\'s surface, facilitating navigation, urban planning, and environmental monitoring.</string>
+    <string name="satellite_view">Satellite View</string>
+    <string name="traffic_view_maps_provide_up_to_the_minute_updates_on_traffic_conditions_empowering_commuters_to_navigate_with_precision_circumvent_congestion_and_enjoy_seamless_journeys">Traffic view maps provide up-to-the-minute updates on traffic conditions, empowering commuters to navigate with precision, circumvent congestion, and enjoy seamless journeys.</string>
+    <string name="traffic_map">Traffic Map</string>
+    <string name="area_measurement">Area Measurement</string>
+    <string name="area_measurement_maps_empower_users_to_precisely_calculate_land_size_offering_critical_support_for_urban_planning_agriculture_and_environmental_management_initiatives">Area measurement maps empower users to precisely calculate land size, offering critical support for urban planning, agriculture, and environmental management initiatives.</string>
+    <string name="continue_">Continue</string>
+    <string name="all_cams_view">All Cams View</string>
+</resources>

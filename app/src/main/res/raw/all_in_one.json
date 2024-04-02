@@ -1,0 +1,437 @@
+{
+  "beach": [
+    {
+      "cam_name": "Port of Le Havre",
+      "url_mjpeg": "PLQJVd367J0",
+      "cam_country": "France",
+      "cam_city": "Le Havre",
+      "lat": "49.4719",
+      "lang": "0.1475"
+
+    },
+    {
+      "cam_name": "Boulevard du Midi",
+      "url_mjpeg": "z6BNMoj9Pyo",
+      "cam_country": "France",
+      "cam_city": "Nanterre",
+      "lat": "43.5517",
+      "lang": "7.0181"
+    },
+    {
+      "cam_name": "Haad Rin beach",
+      "url_mjpeg": "1nVFCfRlqRo",
+      "cam_country": "Thailand",
+      "cam_city": "Ko Pha-ngan",
+      "lat": "7.0018",
+      "lang": "100.4981"
+    },
+    {
+      "cam_name": "Crystal Bay From Lamai",
+      "url_mjpeg": "5FNI26lPfgE",
+      "cam_country": "Thailand",
+      "cam_city": "Koh Samui",
+      "lat": "13.7533",
+      "lang": "100.0446"
+    },
+    {
+      "cam_name": "Hollywood Beach Broadwalk",
+      "url_mjpeg": "cmkAbDUEoyA",
+      "cam_country": "US",
+      "cam_city": "Florida",
+      "lat": "41.3192",
+      "lang": "-74.3386"
+    },
+    {
+      "cam_name": "Ouistreham - Le Port",
+      "url_mjpeg": "WdeXOiSKYJ8",
+      "cam_country": "France",
+      "cam_city": "France",
+      "lat": "14.6026",
+      "lang": "-61.0619"
+    },
+    {
+      "cam_name": "Teddy Weed beach",
+      "url_mjpeg": "hdDP207nrQ4",
+      "cam_country": "Thailand",
+      "cam_city": "Koh Samui",
+      "lat": "13.7533",
+      "lang": "100.0452"
+    },
+    {
+      "cam_name": "Deerfield Beach",
+      "url_mjpeg": "-HAi_5IIAYg",
+      "cam_country": "USA",
+      "cam_city": " Florida",
+      "lat": "26.3184",
+      "lang": "80.0998"
+    },
+    {
+      "cam_name": "Rodos Palladium Beach",
+      "url_mjpeg": "drhmo4XSVYA",
+      "cam_country": "Greece",
+      "cam_city": "Greece",
+      "lat": "36.3689",
+      "lang": "28.2211"
+    },
+    {
+      "cam_name": "Muizenberg Beach",
+      "url_mjpeg": "cbQ4b184RTA",
+      "cam_country": "South Africa",
+      "cam_city": "Cape Town",
+      "lat": "-33.91683",
+      "lang": "18.4702"
+    },
+    {
+      "cam_name": "Saint-Malo - Les Thermes Marins",
+      "url_mjpeg": "0l2LxTnQGZc",
+      "cam_country": "France",
+      "cam_city": "Saint-Malo",
+      "lat": "48.9099",
+      "lang": "-2.1829"
+    },
+    {
+      "cam_name": "Tossa de Mar",
+      "url_mjpeg": "nWFcWooDAxI",
+      "cam_country": "Spain",
+      "cam_city": "Catalonia",
+      "lat": "41.4753",
+      "lang": "2.2377"
+    },
+    {
+      "cam_name": "LANZAROTE CRUISE SHIP DOCK",
+      "url_mjpeg": "AkszDPeVaVg",
+      "cam_country": "Spain",
+      "cam_city": "Canary Islands",
+      "lat": "40.4195",
+      "lang": "-3.69197"
+    },
+    {
+      "cam_name": "Cape May Beach NJ",
+      "url_mjpeg": "tzSlztiUG38",
+      "cam_country": "United States",
+      "cam_city": "New Jersey",
+      "lat": "40.74481",
+      "lang": "-74.05853"
+    },
+    {
+      "cam_name": "Kaanapali Beach",
+      "url_mjpeg": "mZof2UQgF9Y",
+      "cam_country": "USA",
+      "cam_city": " Hawaii",
+      "lat": "38.89036",
+      "lang": "-77.03196"
+    },
+    {
+      "cam_name": "Secret Garden Buddha Beach",
+      "url_mjpeg": "P_zJwpM2g68",
+      "cam_country": "Thailand",
+      "cam_city": "Koh Samui",
+      "lat": "9.57631",
+      "lang": "99.95859"
+    },
+    {
+      "cam_name": "St'George Island",
+      "url_mjpeg": "dAD6qtEFGFY",
+      "cam_country": "United States",
+      "cam_city": "Florida",
+      "lat": "42.8462",
+      "lang": "-74.2720"
+    },
+    {
+      "cam_name": "Lamai Beach",
+      "url_mjpeg": "8gLq1Ss0PQM",
+      "cam_country": "Thailand",
+      "cam_city": "Koh Samui",
+      "lat": "9.4670",
+      "lang": "100.0460"
+    },
+    {
+      "cam_name": "Strand beach",
+      "url_mjpeg": "pLXniry24hg",
+      "cam_country": "South Africa",
+      "cam_city": "Cape Town",
+      "lat": "-34.0733",
+      "lang": "18.7489"
+    }
+  ],
+  "highway": [
+
+    {
+      "cam_name": "Revelstoke, British Columbia",
+      "url_mjpeg": "BahXDYWQAKk",
+      "cam_country": " Canada,",
+      "cam_city": " Canada",
+      "lat": "50.9970",
+      "lang": "-118.1957"
+    },
+    {
+      "cam_name": "Village of Tilton",
+      "url_mjpeg": "5_XSYlAfJZM",
+      "cam_country": "USA",
+      "cam_city": " Danville Township",
+      "lat": "40.8427",
+      "lang": "-91.3172"
+    },
+    {
+      "cam_name": "Tokyo Shinjuku Live",
+      "url_mjpeg": "6dp-bvQ7RWo",
+      "cam_country": "Japan",
+      "cam_city": "Tokyo",
+      "lat": "35.6894",
+      "lang": "139.7034"
+    },
+    {
+      "cam_name": "Brooklyn Bridge & Manhattan cam",
+      "url_mjpeg": "KGuCGd726RA",
+      "cam_country": "NEW YORK CITY",
+      "cam_city": "NEW YORK CITY",
+      "lat": "40.7061",
+      "lang": "-73.9969"
+    },
+    {
+      "cam_name": "Grand Targhee Resort",
+      "url_mjpeg": "g7fWaol3P1g",
+      "cam_country": "NEW YORK CITY",
+      "cam_city": "NEW YORK CITY",
+      "lat": "40.7061",
+      "lang": "-73.9969"
+    },
+    {
+      "cam_name": "Bondi Lamai Street",
+      "url_mjpeg": "UmfOGBhSpOk",
+      "cam_country": "Thailand",
+      "cam_city": "Koh Samui",
+      "lat": "9.5120",
+      "lang": "100.0136"
+    },
+    {
+      "cam_name": "Virtual Railfan",
+      "url_mjpeg": "-n_zlXaqmM0",
+      "cam_country": "United States",
+      "cam_city": "Ashland",
+      "lat": "38.4758",
+      "lang": "-84.6466"
+    },
+    {
+      "cam_name": "Houston Highway",
+      "url_mjpeg": "fix2LD9onS0",
+      "cam_country": "Texas",
+      "cam_city": "Houston",
+      "lat": "29.7604",
+      "lang": "-95.3698"
+    },
+    {
+      "cam_name": "Surrey Highways",
+      "url_mjpeg": "HBDD3j5so0g",
+      "cam_country": "England",
+      "cam_city": "Guildford",
+      "lat": "51.2575",
+      "lang": "-0.5311"
+    },
+    {
+      "cam_name": "Fostoria, Ohio, USA",
+      "url_mjpeg": "siw7qIsn29Y",
+      "cam_country": "United States",
+      "cam_city": "Penguin",
+      "lat": "41.1570",
+      "lang": "-83.4169"
+    },
+    {
+      "cam_name": "Tokachi Big Bridge",
+      "url_mjpeg": "nk9uKVuLcGE",
+      "cam_country": "Japan",
+      "cam_city": "Hokkaido",
+      "lat": "35.6215",
+      "lang": "139.1181"
+    },
+    {
+      "cam_name": "Jackson Hole Wyoming USA Town Square",
+      "url_mjpeg": "1EiC9bvVGnk",
+      "cam_country": "USA",
+      "cam_city": "Town Square  ",
+      "lat": "43.4799",
+      "lang": "110.7624"
+    },
+    {
+      "cam_name": "Downtown Telluride",
+      "url_mjpeg": "8Et9fVZld7E",
+      "cam_country": "United States",
+      "cam_city": "Telluride  ",
+      "lat": "37.9498",
+      "lang": "107.8496"
+    }
+  ],
+  "street": [
+
+    {
+      "cam_name": "Gualdo Tadino",
+      "url_mjpeg": "50kkmEoTMcY",
+      "cam_country": "Italy",
+      "cam_city": "Gualdo Tadino",
+      "lat": "43.2341",
+      "lang": "12.7822"
+    },
+    {
+      "cam_name": "Times Square",
+      "url_mjpeg": "kQYk-j2e1JE",
+      "cam_country": "United States",
+      "cam_city": "New York",
+      "lat": "40.7580",
+      "lang": "73.9855"
+    },
+    {
+      "cam_name": "Oxford Martin School, Broad Street, Oxford",
+      "url_mjpeg": "St7aTfoIdYQ",
+      "cam_country": "England",
+      "cam_city": "Oxford",
+      "lat": "51.7549",
+      "lang": "1.2542"
+    },
+    {
+      "cam_name": "Rolling Cam Venice",
+      "url_mjpeg": "ph1vpnYIxJk",
+      "cam_country": "Italy",
+      "cam_city": "Venice",
+      "lat": "45.4408",
+      "lang": "12.3155"
+    },
+    {
+      "cam_name": "Jackson Hole Wyoming USA Town Square",
+      "url_mjpeg": "DoUOrTJbIu4",
+      "cam_country": "Wyoming",
+      "cam_city": "Jackson",
+      "lat": "43.4799",
+      "lang": "110.7624"
+    },
+    {
+      "cam_name": "Live Walking New York City",
+      "url_mjpeg": "vsfEE30aiis",
+      "cam_country": "United States",
+      "cam_city": "New York",
+      "lat": "40.730610",
+      "lang": "73.935242"
+    },
+    {
+      "cam_name": "Live Webcam Koksijde-Bad",
+      "url_mjpeg": "5Uqw_G_IdjE",
+      "cam_country": "Belgium",
+      "cam_city": "Koksijde-Bad",
+      "lat": "51.1055",
+      "lang": "2.6534"
+    },
+    {
+      "cam_name": "Rolling Cam Venice",
+      "url_mjpeg": "ph1vpnYIxJk",
+      "cam_country": "Italy",
+      "cam_city": "Venice",
+      "lat": "45.4408",
+      "lang": "12.3155"
+    },
+    {
+      "cam_name": "Amsterdam Live",
+      "url_mjpeg": "zvx4y0BL50Q",
+      "cam_country": " Netherlands",
+      "cam_city": "Amsterdam",
+      "lat": "52.3676",
+      "lang": "4.9041"
+    },
+    {
+      "cam_name": "Daxi Old Street",
+      "url_mjpeg": "XUWjAsajKXg",
+      "cam_country": "Taiwan",
+      "cam_city": "China",
+      "lat": "24.8852",
+      "lang": "121.2875"
+    },
+    {
+      "cam_name": "Japan Walk Arrange",
+      "url_mjpeg": "gC4dJGHWwDU",
+      "cam_country": "Tokyo",
+      "cam_city": "Japan",
+      "lat": "35.6586",
+      "lang": "139.7454"
+    },
+    {
+      "cam_name": "St. John Spice Webcam",
+      "url_mjpeg": "2wqpy036z24",
+      "cam_country": "United Sates",
+      "cam_city": "Cruz Bay",
+      "lat": "18.3311",
+      "lang": "64.7952"
+    },
+    {
+      "cam_name": "Michael Weiss Street Brasov",
+      "url_mjpeg": "G05wmWFDtSo",
+      "cam_country": "Romania",
+      "cam_city": "Brașov",
+      "lat": "45.6427",
+      "lang": "25.5887"
+    }
+  ],
+  "Zoo Cam": [
+    {
+      "cam_name": "Állatkert Budapest szívében",
+      "url_mjpeg": "sBg8TC11i6k",
+      "cam_country": "Hungary",
+      "cam_city": "Budapests",
+      "lat": "47.5190",
+      "lang": "19.0776"
+    },
+    {
+      "cam_name": "Trevor Zoo Red Pandas",
+      "url_mjpeg": "38bKAgQb0BM",
+      "cam_country": "United States",
+      "cam_city": "Millbrook School Rd New York",
+      "lat": "41.8553",
+      "lang": "73.6183"
+    },
+    {
+      "cam_name": "Wolong Grove Panda",
+      "url_mjpeg": "MIA8AKVZ0Yk",
+      "cam_country": "China",
+      "cam_city": "Chengdu",
+      "lat": "31.0333332",
+      "lang": "103.1833326"
+    },
+    {
+      "cam_name": "LIVE Animal Cam - Bear - Deer - Boar - Fox - Wolf - Birds - Wildlife",
+      "url_mjpeg": "4y2j6OiA0K8",
+      "cam_country": " Romania",
+      "cam_city": "Transylvania",
+      "lat": "45.9432",
+      "lang": "24.9668"
+    },
+    {
+      "cam_name": "Taronga Zoo Sydney",
+      "url_mjpeg": "SLwxE5h5O74",
+      "cam_country": "Australia",
+      "cam_city": "Sydney",
+      "lat": "33.8435",
+      "lang": "151.2413"
+    },
+    {
+      "cam_name": "Live Animal Cam",
+      "url_mjpeg": "OIqUka8BOS8",
+      "cam_country": "United States",
+      "cam_city": "Ohio",
+      "lat": "41.2808",
+      "lang": "81.5678"
+    },
+    {
+      "cam_name": "KC Zoo Penguin Cam",
+      "url_mjpeg": "kZmXVU9c668",
+      "cam_country": "United States",
+      "cam_city": "Saint Louis",
+      "lat": "38.6270",
+      "lang": "90.1994"
+    },
+    {
+      "cam_name": "Venice Beach Live Camera",
+      "url_mjpeg": "3LXQWU67Ufk",
+      "cam_country": "United States",
+      "cam_city": "Los Angeles",
+      "lat": "34.0522",
+      "lang": "118.2437"
+    }
+  ]
+}
