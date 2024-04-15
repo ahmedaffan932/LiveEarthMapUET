@@ -303,8 +303,10 @@ class MainActivity : AppCompatActivity(), PermissionsListener {
         permissionsManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
         if (grantResults.isEmpty()) {
-            Toast.makeText(this,
-                getString(R.string.please_give_required_permission), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                getString(R.string.please_give_required_permission), Toast.LENGTH_SHORT
+            ).show()
             return
         }
 
@@ -398,7 +400,11 @@ class MainActivity : AppCompatActivity(), PermissionsListener {
         if (granted) {
             startMyActivity(myIntent, Misc.lemInt)
         } else {
-            Toast.makeText(this, getString(R.string.location_permission_is_required), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                getString(R.string.location_permission_is_required),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 
@@ -408,13 +414,8 @@ class MainActivity : AppCompatActivity(), PermissionsListener {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
             return
         } else {
-            Ads.loadAndShowInterstitial(this, Misc.isQuitInt, object : InterstitialCallBack {
-                override fun onDismiss() {
-                    bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+            bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
 //                    Ads.showNativeAd(this@MainActivity, nativeAd, Misc.quitNativeAm_Al, null)
-                }
-
-            })
         }
     }
 

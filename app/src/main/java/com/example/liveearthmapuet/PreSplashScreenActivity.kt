@@ -17,6 +17,7 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 
+@SuppressLint("CustomSplashScreen")
 class PreSplashScreenActivity : AppCompatActivity() {
     lateinit var binding: ActivityPreSplashScreenBinding
     private lateinit var consentInformation: ConsentInformation
@@ -41,45 +42,35 @@ class PreSplashScreenActivity : AppCompatActivity() {
             .build()
 
         consentInformation = UserMessagingPlatform.getConsentInformation(this)
-        consentInformation.requestConsentInfoUpdate(
-            this,
-            params,
-            {
-                UserMessagingPlatform.loadAndShowConsentFormIfRequired(
-                    this
-                ) { loadAndShowError ->
+        consentInformation.requestConsentInfoUpdate(this, params, {
+            UserMessagingPlatform.loadAndShowConsentFormIfRequired(this) { loadAndShowError ->
 
-                    if (loadAndShowError != null) {
-                        // Consent gathering failed.
-                        Log.d(Misc.logKey, String.format("%s: %s", loadAndShowError.message))
-                        showStartButton()
-                        Misc.canRequestAds = false
-
-                    }
-
-                    if (consentInformation.canRequestAds()) {
-                        MobileAds.initialize(this) {}
-                        showStartButton()
-                        Misc.canRequestAds = true
-                    } else {
-                        showStartButton()
-                        Misc.canRequestAds = false
-                    }
+                if (loadAndShowError != null) {
+                    Log.d(Misc.logKey, String.format("%s: %s", loadAndShowError.message))
+                    showStartButton()
+                    Misc.canRequestAds = false
                 }
-            },
-            { requestConsentError ->
-                Log.w(
-                    Misc.logKey, String.format(
-                        "%s: %s",
-                        requestConsentError.errorCode,
-                        requestConsentError.message
-                    )
-                )
-                showStartButton()
-                Misc.canRequestAds = false
 
+                if (consentInformation.canRequestAds()) {
+                    MobileAds.initialize(this) {}
+                    showStartButton()
+                    Misc.canRequestAds = true
+                } else {
+                    showStartButton()
+                    Misc.canRequestAds = false
+                }
             }
-        )
+        }, { requestConsentError ->
+            Log.w(
+                Misc.logKey, String.format(
+                    "%s: %s",
+                    requestConsentError.errorCode,
+                    requestConsentError.message
+                )
+            )
+            showStartButton()
+            Misc.canRequestAds = false
+        })
     }
 
     private fun showStartButton() {
@@ -102,6 +93,9 @@ class PreSplashScreenActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful && !BuildConfig.DEBUG) {
                         mFRC.activate()
+                        Misc.nativeAdIdAdMobOne = mFRC.getString("nativeAdIdAdMobOne")
+                        Misc.interstitialAdIdAdMob = mFRC.getString("interstitialAdIdAdMob")
+
                         Misc.dashboardInt = mFRC.getString("dashboardInt")
                         Misc.onboardingNative = mFRC.getString("onboardingNative")
                         Misc.appLanguageSelectorNative = mFRC.getString("appLanguageSelectorNative")

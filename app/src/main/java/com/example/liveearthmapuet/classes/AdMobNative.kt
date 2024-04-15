@@ -27,7 +27,7 @@ import com.google.android.gms.ads.nativead.NativeAd
 object AdMobNative {
     var mNativeAdAdMobOne: NativeAd? = null
 
-    fun loadNativeOne(activity: Activity, callBack: LoadInterstitialCallBack?) {
+    fun loadNativeOne(activity: Activity, callBack: LoadInterstitialCallBack? = null) {
         mNativeAdAdMobOne = null
         if (Misc.getPurchasedStatus(activity)) return
 

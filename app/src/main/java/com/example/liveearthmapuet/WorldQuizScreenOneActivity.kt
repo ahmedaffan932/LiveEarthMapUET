@@ -93,14 +93,4 @@ class WorldQuizScreenOneActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        Ads.loadAndShowInterstitial(
-            this,
-            Misc.quizScreenOneBackInt,
-            object : InterstitialCallBack {
-                override fun onDismiss() {
-                    finish()
-                }
-            })
-    }
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.liveearthmapuet.classes.AdMobInterstitial
+import com.example.liveearthmapuet.classes.AdMobNative
 import com.example.liveearthmapuet.classes.Misc
 import com.example.liveearthmapuet.classes.Misc.Companion.setAppLanguage
 import com.example.liveearthmapuet.databinding.ActivityLoadingAdBinding
@@ -17,6 +18,9 @@ class LoadingAdActivity : AppCompatActivity() {
         setAppLanguage()
         binding = ActivityLoadingAdBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        if(!Misc.isFirstTime(this)){
+            AdMobNative.loadNativeOne(this)
+        }
 
         if (Misc.canRequestAds) {
             AdMobInterstitial.loadInterAdmob(this, object : LoadInterstitialCallBack {

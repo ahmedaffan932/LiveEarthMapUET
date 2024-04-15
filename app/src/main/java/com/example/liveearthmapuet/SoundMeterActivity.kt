@@ -138,11 +138,4 @@ class SoundMeterActivity : AppCompatActivity() {
         handler.removeCallbacks(runSoundMeter)
     }
 
-    override fun onBackPressed() {
-        Ads.loadAndShowInterstitial(this, Misc.soundMeterBackInt, object : InterstitialCallBack {
-            override fun onDismiss() {
-                finish()
-            }
-        })
-    }
 }

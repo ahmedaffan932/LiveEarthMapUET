@@ -431,7 +431,7 @@ class Misc {
                 setCatTitleImg(R.drawable.ic_beach_cam, "beach", beachList, 0)
                 setCatTitleImg(R.drawable.ic_building, "highway", highwayList, beachList.size)
                 setCatTitleImg(R.drawable.ic_street_cam, "street", streetList, highwayList.size)
-                setCatTitleImg(R.drawable.ic_pawprint, "Zoo Cam", zooCamList, streetList.size)
+                setCatTitleImg(R.drawable.ic_street_cam, "Zoo Cam", zooCamList, streetList.size)
 
                 allCamList.addAll(beachList)
                 allCamList.addAll(highwayList)

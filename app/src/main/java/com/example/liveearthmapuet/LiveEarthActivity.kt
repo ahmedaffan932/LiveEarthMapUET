@@ -125,8 +125,10 @@ class LiveEarthActivity : AppCompatActivity(), OnMapReadyCallback,
 
         binding.btnShareLocation.setOnClickListener {
             if (address == "") {
-                Toast.makeText(this,
-                    getString(R.string.please_select_valid_location), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    getString(R.string.please_select_valid_location), Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
             val sharingIntent = Intent(Intent.ACTION_SEND)
@@ -357,8 +359,10 @@ class LiveEarthActivity : AppCompatActivity(), OnMapReadyCallback,
                         address =
                             addresses[0].getAddressLine(0) + "\n \n http://maps.google.com/?q=${p.latitude},${p.longitude}"
                     } else {
-                        Toast.makeText(this,
-                            getString(R.string.address_not_found), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this,
+                            getString(R.string.address_not_found), Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
                 addresses[0].countryName
@@ -407,7 +411,7 @@ class LiveEarthActivity : AppCompatActivity(), OnMapReadyCallback,
                     buildAlertMessageNoGps()
                 } else {
                     if (PermissionsManager.areLocationPermissionsGranted(this)) {
-                       fetchCurrentLocation()
+                        fetchCurrentLocation()
                     } else {
                         permissionsManager.requestLocationPermissions(this)
                     }
@@ -473,7 +477,8 @@ class LiveEarthActivity : AppCompatActivity(), OnMapReadyCallback,
 
 
                 Misc.showView(binding.btnGetDirection, this, false)
-                isBtnGenerateVisible = Misc.showView(binding.btnGenerateQR, this, isBtnGenerateVisible)
+                isBtnGenerateVisible =
+                    Misc.showView(binding.btnGenerateQR, this, isBtnGenerateVisible)
             }
         } catch (e: Exception) {
             e.printStackTrace()
@@ -503,14 +508,7 @@ class LiveEarthActivity : AppCompatActivity(), OnMapReadyCallback,
             isRouteAdded = false
         } else {
 //            super.onBackPressed()
-            Ads.loadAndShowInterstitial(
-                this,
-                Misc.liveEarthOnBackInt,
-                object : InterstitialCallBack {
-                    override fun onDismiss() {
-                        finish()
-                    }
-                })
+            finish()
         }
     }
 
@@ -911,13 +909,15 @@ class LiveEarthActivity : AppCompatActivity(), OnMapReadyCallback,
         if (granted) {
             fetchCurrentLocation()
         } else {
-            Toast.makeText(this,
-                getString(R.string.location_permission_is_required), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                getString(R.string.location_permission_is_required), Toast.LENGTH_SHORT
+            ).show()
         }
     }
 
     @SuppressLint("MissingPermission")
-    private fun fetchCurrentLocation(){
+    private fun fetchCurrentLocation() {
         point.latitude = 25.107170
         point.longitude = 55.147276
 

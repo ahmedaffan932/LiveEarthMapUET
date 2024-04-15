@@ -175,12 +175,4 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("MissingSuperCall")
-    override fun onBackPressed() {
-        Ads.loadAndShowInterstitial(this, Misc.settingBackInt, object : InterstitialCallBack {
-            override fun onDismiss() {
-                finish()
-            }
-        })
-    }
 }

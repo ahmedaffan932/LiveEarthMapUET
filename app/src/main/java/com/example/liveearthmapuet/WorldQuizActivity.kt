@@ -49,12 +49,4 @@ class WorldQuizActivity : AppCompatActivity() {
 
     }
 
-    @SuppressLint("MissingSuperCall")
-    override fun onBackPressed() {
-        Ads.loadAndShowInterstitial(this, Misc.worldQuizOnBackInt, object : InterstitialCallBack {
-            override fun onDismiss() {
-                finish()
-            }
-        })
-    }
 }

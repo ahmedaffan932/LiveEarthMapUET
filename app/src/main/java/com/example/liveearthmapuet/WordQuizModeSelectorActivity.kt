@@ -101,11 +101,4 @@ class WordQuizModeSelectorActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        Ads.loadAndShowInterstitial(this, Misc.continentSelectBackInt, object : InterstitialCallBack {
-            override fun onDismiss() {
-                finish()
-            }
-        })
-    }
 }

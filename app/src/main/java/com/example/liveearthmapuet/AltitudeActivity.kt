@@ -274,16 +274,6 @@ class AltitudeActivity : AppCompatActivity(), PermissionsListener,
         mapView.onLowMemory()
     }
 
-    @SuppressLint("MissingSuperCall")
-    override fun onBackPressed() {
-        Ads.loadAndShowInterstitial(this, Misc.altitudeBackInt, object : InterstitialCallBack {
-            override fun onDismiss() {
-                finish()
-            }
-        })
-    }
-
-
     private fun setMarker(point: LatLng) {
         if (mapBoxStyle.getLayer(LiveEarthActivity.DROPPED_MARKER_LAYER_ID) != null) {
             val source = mapBoxStyle.getSourceAs<GeoJsonSource>("dropped-marker-source-id")

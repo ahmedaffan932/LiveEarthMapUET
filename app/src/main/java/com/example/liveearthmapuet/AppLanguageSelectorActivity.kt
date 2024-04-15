@@ -37,7 +37,7 @@ class AppLanguageSelectorActivity : AppCompatActivity() {
                 binding.rbSpanish.isChecked = true
             }
 
-            "kr" -> {
+            "ko" -> {
                 binding.rbKorean.isChecked = true
             }
 

@@ -120,13 +120,4 @@ class SpeedometerActivity : AppCompatActivity() {
         }
     }
 
-
-    override fun onBackPressed() {
-        Ads.loadAndShowInterstitial(this, Misc.soundMeterBackInt, object : InterstitialCallBack {
-            override fun onDismiss() {
-                finish()
-            }
-        })
-    }
-
 }

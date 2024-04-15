@@ -13,7 +13,7 @@ android {
         applicationId "com.earthmap.satelliteview.streetview.mapsandnavigation.liveearthmap.gps"
         minSdk 27
         targetSdk 33
-        versionCode 18
+        versionCode 19
         versionName "3.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -102,8 +102,6 @@ dependencies {
     implementation 'androidx.camera:camera-camera2:1.1.0-alpha09'
     implementation "androidx.camera:camera-lifecycle:1.1.0-alpha09"
 
-    implementation 'com.anjlab.android.iab.v3:library:2.0.3'
-
     implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
     implementation 'com.google.zxing:core:3.3.2'
 
@@ -132,4 +130,11 @@ dependencies {
 
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
     implementation("androidx.mediarouter:mediarouter:1.2.5")
+
+    implementation "com.android.billingclient:billing-ktx:6.1.0"
+
+
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+    implementation 'com.google.guava:guava:24.1-jre'
+
 }

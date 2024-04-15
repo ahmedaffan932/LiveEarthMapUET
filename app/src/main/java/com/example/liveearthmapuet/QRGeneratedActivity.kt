@@ -145,15 +145,6 @@ class QRGeneratedActivity : AppCompatActivity() {
         startActivity(Intent.createChooser(intent, "Share QR"))
     }
 
-    @SuppressLint("MissingSuperCall")
-    override fun onBackPressed() {
-        Ads.loadAndShowInterstitial(this, Misc.generateQrOnBackInt, object : InterstitialCallBack {
-            override fun onDismiss() {
-                finish()
-            }
-        })
-    }
-
 //    override fun onResume() {
 //        super.onResume()
 //        Ads.showNativeAd(

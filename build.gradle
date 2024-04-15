@@ -21,13 +21,13 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.2'
+        classpath 'com.android.tools.build:gradle:7.0.4'
 
         // Specified as going here by the Firebase instructions.
         classpath 'com.google.gms:google-services:4.3.10'
 
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.13'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.0'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0'
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
         classpath "com.applovin.quality:AppLovinQualityServiceGradlePlugin:+"
 

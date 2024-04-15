@@ -12,8 +12,6 @@ import android.view.View
 import com.google.firebase.FirebaseApp
 import com.example.liveearthmapuet.classes.Ads
 import com.example.liveearthmapuet.classes.Misc
-import com.anjlab.android.iab.v3.PurchaseInfo
-import com.anjlab.android.iab.v3.BillingProcessor
 import com.example.liveearthmapuet.classes.Misc.Companion.setAppLanguage
 import com.example.liveearthmapuet.databinding.ActivitySplashScreenBinding
 import com.example.liveearthmapuet.interfaces.InterstitialCallBack
@@ -22,7 +20,6 @@ import com.example.liveearthmapuet.interfaces.InterstitialCallBack
 class SplashScreenActivity : BaseActivity() {
     private var handler = Handler()
     private var loadingPercentage = 0
-    private lateinit var bp: BillingProcessor
     private var isAdRequestSent: Boolean = false
     lateinit var binding: ActivitySplashScreenBinding
 
@@ -36,8 +33,6 @@ class SplashScreenActivity : BaseActivity() {
         )
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        billing()
 
         loadAds()
 
@@ -104,36 +99,6 @@ class SplashScreenActivity : BaseActivity() {
                 }
             })
         }
-    }
-
-    @SuppressLint("LogNotTimber")
-    private fun billing() {
-        bp = BillingProcessor(
-            this,
-            getString(R.string.billing_id),
-            object : BillingProcessor.IBillingHandler {
-                override fun onProductPurchased(
-                    productId: String,
-                    details: PurchaseInfo?
-                ) {
-                    Misc.setPurchasedStatus(this@SplashScreenActivity, true)
-                }
-
-                override fun onPurchaseHistoryRestored() {
-
-                }
-
-                override fun onBillingError(errorCode: Int, error: Throwable?) {
-                    Log.e("TAG", "onBillingError: ${error?.message}")
-                }
-
-                override fun onBillingInitialized() {
-                    Log.e("TAG", "onBillingInitialized: ")
-                }
-
-            })
-
-        bp.initialize()
     }
 
     fun loadAds() {

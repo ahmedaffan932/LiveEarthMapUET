@@ -279,11 +279,7 @@ class NoteCamActivity : BaseActivity() {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
         } else {
 //            super.onBackPressed()
-            Ads.loadAndShowInterstitial(this, Misc.noteCamOnBackInt, object : InterstitialCallBack {
-                override fun onDismiss() {
-                    finish()
-                }
-            })
+            finish()
         }
     }
 

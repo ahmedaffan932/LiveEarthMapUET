@@ -343,7 +343,7 @@
             android:elevation="@dimen/less_padding"
             android:paddingVertical="@dimen/fab_padding"
             android:paddingLeft="60dp"
-            android:tag="kr"
+            android:tag="ko"
             android:text="한국인"
             android:textAlignment="textStart"
             android:textColor="@color/black"
