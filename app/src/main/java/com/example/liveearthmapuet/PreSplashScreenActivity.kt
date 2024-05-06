@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.liveearthmapuet.classes.AdMobNative
 import com.example.liveearthmapuet.classes.Misc
 import com.example.liveearthmapuet.classes.Misc.Companion.setAppLanguage
 import com.example.liveearthmapuet.databinding.ActivityPreSplashScreenBinding
@@ -30,6 +31,11 @@ class PreSplashScreenActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         getRemoteConfigValues()
+
+        if(!Misc.isFirstTime(this)){
+            AdMobNative.loadNativeOne(this)
+        }
+
 
         val debugSettings = ConsentDebugSettings.Builder(this)
             .setDebugGeography(ConsentDebugSettings.DebugGeography.DEBUG_GEOGRAPHY_EEA)
@@ -78,7 +84,23 @@ class PreSplashScreenActivity : AppCompatActivity() {
         binding.animContinue.loop(true)
         binding.animContinue.playAnimation()
         binding.animContinue.setOnClickListener {
-            startActivity(Intent(this, LoadingAdActivity::class.java))
+//            startActivity(Intent(this, LoadingAdActivity::class.java))
+            if (Misc.isFirstTime(this)) {
+                startActivity(
+                    Intent(
+                        this,
+                        AppLanguageSelectorActivity::class.java
+                    )
+                )
+            } else {
+                startActivity(
+                    Intent(
+                        this,
+                        MainActivity::class.java
+                    )
+                )
+            }
+            finish()
         }
     }
 

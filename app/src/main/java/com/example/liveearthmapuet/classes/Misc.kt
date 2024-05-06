@@ -122,7 +122,7 @@ class Misc {
         var nativeAdIdAdMobOne: String = if (BuildConfig.DEBUG) {
             "ca-app-pub-3940256099942544/2247696110"
         } else {
-            ""
+            "ca-app-pub-3334765608093788/9119691940"
         }
 
         var gameMode: String = ""

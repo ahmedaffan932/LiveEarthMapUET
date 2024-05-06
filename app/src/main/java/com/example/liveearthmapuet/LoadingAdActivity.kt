@@ -18,9 +18,6 @@ class LoadingAdActivity : AppCompatActivity() {
         setAppLanguage()
         binding = ActivityLoadingAdBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        if(!Misc.isFirstTime(this)){
-            AdMobNative.loadNativeOne(this)
-        }
 
         if (Misc.canRequestAds) {
             AdMobInterstitial.loadInterAdmob(this, object : LoadInterstitialCallBack {

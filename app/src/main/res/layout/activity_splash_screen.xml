@@ -106,10 +106,11 @@
         android:layout_height="@dimen/_100sdp"
         android:layout_marginHorizontal="@dimen/extra_padding"
         android:layout_marginTop="@dimen/extra_padding"
+        app:shapeAppearanceOverlay="@style/roundedCorners"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/icon_rounded_corners" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView"
